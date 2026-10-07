@@ -1,15 +1,15 @@
                  ##Demosatrating Model thorugh init_chat_model
 
-from langchain.chat_models import init_chat_model  #importing chatmodels
+from langchain.chat_models import init_chat_model        #importing chatmodels
 from dotenv import load_dotenv
 
-load_dotenv()       # loading our api key here though env file
+load_dotenv()                                            # loading our api key here though env file
 
 model=init_chat_model("nvidia/nemotron-3-ultra-550b-a55b:free",model_provider="openrouter", temperature=1.4) #initiating our model
 #if you wanna use openai,gemini,anthropic just change model name and model_provider inside it
 
-message=input("Enter: ")       #prompting message 
-result=model.invoke(message) #call on model with message
+message=input("Enter: ")                                 #prompting message 
+result=model.invoke(message)                             #call on model with message
 print(result.content)
 
 
