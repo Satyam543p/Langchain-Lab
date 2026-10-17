@@ -355,3 +355,29 @@ How should the data be routed?
 
 That data-flow understanding becomes the foundation for the
 **Runnables** module.
+
+------------------------------------------------------------------------
+
+## 🔗 More Chains to Explore
+
+The following chains expand the basic workflow patterns covered in this
+module. They show how LangChain can combine model calls with prompts,
+retrieval, memory, routing, tools, and databases.
+
+| Chain | What it does |
+|---|---|
+| `LLMChain` | Calls a language model with a prompt template. |
+| `SequentialChain` | Runs multiple chain steps in a defined sequence. |
+| `SimpleSequentialChain` | Provides a simpler sequential-chain interface for straightforward workflows. |
+| `ConversationalRetrievalChain` | Supports conversational question answering using memory and document retrieval. |
+| `RetrievalQA` | Retrieves relevant documents and uses a language model to answer a question. |
+| `RouterChain` | Routes a user query to a different chain based on its intent or input. |
+| `MultiPromptChain` | Selects and uses different prompts for different user intents. |
+| `HyDE` (Hypothetical Document Embeddings) | Generates a hypothetical answer or document to improve retrieval. |
+| `AgentExecutor` | Coordinates an agent's tool calls and actions dynamically. |
+| `SQLDatabaseChain` | Converts natural-language questions into SQL queries and uses a database to answer them. |
+
+> **Note:** Several classic chain classes have been deprecated, replaced, or
+> reorganized in newer LangChain versions. Use this table as a conceptual
+> roadmap, then check the official documentation for the current
+> implementation and recommended runnable-based alternative.
