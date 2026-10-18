@@ -1,0 +1,3 @@
+Database Management Systems
+
+Normalization organizes relational tables to reduce redundancy and update anomalies.

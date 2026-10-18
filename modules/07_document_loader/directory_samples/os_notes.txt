@@ -1,0 +1,3 @@
+Operating Systems
+
+A process is a program in execution. A thread is a unit of execution within a process.

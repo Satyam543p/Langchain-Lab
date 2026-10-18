@@ -1,0 +1,13 @@
+LangChain Document Loader Practice
+
+Topic: Operating System Deadlocks
+
+A deadlock is a situation in which a group of processes are blocked because each process is waiting for a resource held by another process in the group.
+
+The four necessary conditions for deadlock are:
+1. Mutual exclusion: at least one resource cannot be shared.
+2. Hold and wait: a process holds resources while waiting for additional resources.
+3. No preemption: resources cannot be forcibly taken away.
+4. Circular wait: a circular chain of processes exists, with each process waiting for a resource held by the next process.
+
+A system can prevent deadlock by ensuring that at least one necessary condition never holds.

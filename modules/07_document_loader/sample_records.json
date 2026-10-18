@@ -1,0 +1,23 @@
+{
+  "course": "LangChain Learning Lab",
+  "records": [
+    {
+      "id": "DOC001",
+      "title": "Document Loaders",
+      "difficulty": "beginner",
+      "summary": "Load external content into LangChain Document objects."
+    },
+    {
+      "id": "DOC002",
+      "title": "Text Splitters",
+      "difficulty": "beginner",
+      "summary": "Divide long documents into smaller chunks for retrieval."
+    },
+    {
+      "id": "DOC003",
+      "title": "Vector Stores",
+      "difficulty": "intermediate",
+      "summary": "Store embeddings and retrieve relevant documents by similarity."
+    }
+  ]
+}
