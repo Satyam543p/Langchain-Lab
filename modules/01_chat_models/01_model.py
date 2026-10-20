@@ -38,13 +38,3 @@ print("type:",type(result),"\n\n result: ",result.content ,"\n\n result Response
 ##   With a higher temperature, the model can produce more variation in its responses.
 
                     
-                    
-                    
-                    ###Another way for model initialtion
-
-# from langchain_openai/anthropic/google-genai/openrouter import ChatOpenAI/Anthropic/Openrouter
-
-# model = ChatOpenAI(model="gpt-5.6-luna")
-# response = model.invoke("Explain recursion in one sentence.")
-
-# print(response.content)                   

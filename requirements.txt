@@ -1,27 +1,51 @@
-# LangChain Core
+# ============================================================
+# LANGCHAIN CORE
+# ============================================================
 langchain
 langchain-core
-langchain_community
+langchain-community
+langchain-text-splitters
 
-# OpenAI Integration
-langchain-openai
-openai
-
-# Anthropic Integration
+# ============================================================
+# CHAT MODEL PROVIDERS — CHAT ONLY
+# ============================================================
 langchain-anthropic
+langchain-groq
 
-# Google Gemini (PaLM) Integration
+# ============================================================
+# PROVIDERS — CHAT + EMBEDDINGS
+# ============================================================
 langchain-google-genai
-google-generativeai
-
-# Hugging Face Integration
+langchain-openai
 langchain-huggingface
-transformers
-huggingface-hub
+langchain-ollama
+langchain-cohere
+langchain-mistralai
+langchain-openrouter
 
-# Environment Variable Management
-python-dotenv
-
-# Machine Learning Utilities
+# ============================================================
+# EMBEDDING & MACHINE LEARNING UTILITIES
+# ============================================================
 numpy
 scikit-learn
+sentence-transformers
+transformers
+huggingface-hub
+tiktoken
+
+# ============================================================
+# DOCUMENT LOADERS
+# ============================================================
+pypdf
+beautifulsoup4
+jq
+
+# ============================================================
+# ENVIRONMENT VARIABLES
+# ============================================================
+python-dotenv
+
+# ============================================================
+# VISUALIZATION
+# ============================================================
+grandalf

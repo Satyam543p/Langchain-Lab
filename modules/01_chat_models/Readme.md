@@ -101,9 +101,10 @@ The main hands-on implementation for this module is:
 
 ```text
 modules/
-└── 01_models/
-    ├── README.md
-    └── 01_openroutermodel.py
+└── 01_chat_models/
+    ├── Readme.md
+    ├── 01_model.py
+    └── 02_model_provider_reference.py
 ```
 
 Your implementation demonstrates the basic flow:
@@ -128,7 +129,32 @@ The point of this file is to **experiment with the LangChain model interface**, 
 
 ---
 
-# 🔍 5. What Does `invoke()` Return?
+# 🧰 5. Provider Reference File
+
+[`02_model_provider_reference.py`](./02_model_provider_reference.py) is a provider reference sheet. It collects example LangChain integrations for Gemini, Groq, OpenRouter, OpenAI, Anthropic, Ollama, Hugging Face, and the unified `init_chat_model()` approach.
+
+Use it when you want to:
+
+- compare provider-specific integration packages
+- check the expected environment-variable name
+- see the provider-specific model class and constructor
+- identify parameters that may differ between providers
+- copy one provider configuration into a separate experiment
+
+The file is intentionally a reference, not a standalone experiment. To use it:
+
+1. Choose one provider block.
+2. Install that provider's LangChain integration package.
+3. Add the required API key to `.env`, or install/configure the local service for Ollama.
+4. Copy the selected block into your experiment.
+5. Comment out or remove the other provider blocks.
+6. Verify the current model ID and supported parameters in the provider's official documentation.
+
+Do not assume that every provider supports the same model names, parameters, metadata, or features. Keep provider credentials in `.env`; never place real API keys in Python source code.
+
+---
+
+# 🔍 6. What Does `invoke()` Return?
 
 A model call such as:
 
@@ -156,7 +182,7 @@ An `AIMessage` can contain more information than the visible answer.
 
 ---
 
-# 📦 6. Inspecting `AIMessage`
+# 📦 7. Inspecting `AIMessage`
 
 During the experiment, inspect at least:
 
@@ -192,7 +218,7 @@ Examples may include:
 
 ---
 
-# 🧪 7. Experiment — Temperature
+# 🧪 8. Experiment — Temperature
 
 One of the model configuration experiments is `temperature`.
 
@@ -244,7 +270,7 @@ For controlled experiments, use a specific model identifier rather than a dynami
 
 ---
 
-# 🧩 8. Model Selection
+# 🧩 9. Model Selection
 
 A model object represents a particular provider/model configuration.
 
@@ -264,7 +290,7 @@ When experimenting with models, record the actual model reported in the returned
 
 ---
 
-# 🌐 9. Provider Integrations
+# 🌐 10. Provider Integrations
 
 LangChain supports different model providers through provider-specific integrations.
 
@@ -304,7 +330,7 @@ Different integrations can still have:
 
 ---
 
-# 🔧 10. Two Ways to Initialize Models
+# 🔧 11. Two Ways to Initialize Models
 
 There are two useful patterns to recognize.
 
@@ -342,7 +368,7 @@ The provider-specific class can be useful when you need provider-specific config
 
 ---
 
-# 🧪 11. Experiments Completed
+# 🧪 12. Experiments Completed
 
 ## Experiment A — Basic Model Invocation
 
@@ -419,7 +445,7 @@ A controlled model experiment requires a fixed underlying model.
 
 ---
 
-# ⚖️ 12. What LangChain Gives You
+# ⚖️ 13. What LangChain Gives You
 
 For the Models concept, LangChain provides a common chat-model interface and integrations for supported providers.
 
@@ -440,7 +466,7 @@ The important idea is:
 
 ---
 
-# 🚧 13. Common Pitfalls
+# 🚧 14. Common Pitfalls
 
 ### ❌ Using a dynamic model router for controlled experiments
 
@@ -470,7 +496,7 @@ Do not create unnecessary shared infrastructure until multiple parts of the repo
 
 ---
 
-# 🧠 14. Questions You Must Be Able to Answer
+# 🧠 15. Questions You Must Be Able to Answer
 
 Before moving to the next module, you should be able to answer these without looking them up:
 
@@ -493,14 +519,15 @@ Before moving to the next module, you should be able to answer these without loo
 
 ---
 
-# 📁 15. Module Structure
+# 📁 16. Module Structure
 
 Keep this module simple:
 
 ```text
-01_models/
-├── README.md
-└── 01_openroutermodel.py
+01_chat_models/
+├── Readme.md
+├── 01_model.py
+└── 02_model_provider_reference.py
 ```
 
 Do not create a separate Python file for every small experiment.
@@ -522,6 +549,7 @@ Create another file only when an experiment becomes substantial or conceptually 
 - [x] Understand model selection
 - [x] Understand provider integrations
 - [x] Recognize generic vs provider-specific initialization
+- [x] Use the provider reference file to compare integrations
 
 ---
 
